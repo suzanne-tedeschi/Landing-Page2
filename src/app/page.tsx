@@ -5,18 +5,20 @@ import Image from 'next/image'
 import NewsletterForm from '@/components/NewsletterForm'
 import ContactForm from '@/components/ContactForm'
 import Modal from '@/components/Modal'
+import ConstellationBackground from '@/components/ConstellationBackground'
 
 export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false)
 
   return (
-    <main className="min-h-screen bg-gradient-blue-soft overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl floating-animation"></div>
-        <div className="absolute top-1/3 right-20 w-96 h-96 bg-teal-200/15 rounded-full blur-3xl floating-animation" style={{animationDelay: '-2s'}}></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-blue-100/25 rounded-full blur-3xl floating-animation" style={{animationDelay: '-4s'}}></div>
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-teal-100/20 rounded-full blur-3xl floating-animation" style={{animationDelay: '-3s'}}></div>
+    <main className="min-h-screen bg-gradient-blue-soft overflow-hidden relative">
+      {/* Constellation Background */}
+      <ConstellationBackground />
+      
+      {/* Subtle decorative elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-200/10 rounded-full blur-3xl floating-animation"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-teal-200/8 rounded-full blur-3xl floating-animation" style={{animationDelay: '-3s'}}></div>
       </div>
 
       {/* Navigation */}
