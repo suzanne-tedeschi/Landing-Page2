@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f0f9ff;
+  --foreground: #1e293b;
+  --sage-50: #f6f8f6;
+  --sage-100: #e8f0e8;
+  --sage-200: #d1e1d1;
+  --sage-300: #a8c8a8;
+  --sage-400: #7aa87a;
+  --sage-500: #5a8a5a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #f0f9ff;
+    --foreground: #1e293b;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-effect {
+    background: rgba(240, 249, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(147, 197, 253, 0.3);
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+  }
+  
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 3s infinite;
+  }
+  
+  .bg-gradient-blue {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 25%, #93c5fd 50%, #60a5fa 75%, #3b82f6 100%);
+  }
+  
+  .bg-gradient-blue-soft {
+    background: linear-gradient(45deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+  }
+  
+  .bg-gradient-teal {
+    background: linear-gradient(45deg, #f0fdfa 0%, #ccfbf1 50%, #99f6e4 100%);
+  }
+  
+  .bg-gradient-sage {
+    background: linear-gradient(45deg, #f6f8f6 0%, #e8f0e8 50%, #d1e1d1 100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
