@@ -29,7 +29,7 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
     // Configuration plus riche
     const particleCount = 120
     const maxDistance = 130
-    const speed = 0.15
+    const speed = 0.4
 
     // Fonction pour redimensionner le canvas
     const resizeCanvas = () => {

@@ -96,11 +96,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Transition dégradée */}
-      <div className="h-32 bg-gradient-to-b from-slate-800 via-slate-700/50 to-transparent relative z-5"></div>
+      {/* Transition dégradée plus douce */}
+      <div className="h-24 bg-gradient-to-b from-slate-800 via-slate-600/80 to-slate-700/60 relative z-5"></div>
 
-      {/* Reste du contenu avec fond clair */}
-      <main className="bg-gradient-blue-soft relative -mt-32 pt-32">
+      {/* Reste du contenu avec fond plus sombre harmonisé */}
+      <main className="bg-gradient-to-br from-slate-700 via-slate-600 to-blue-800 relative -mt-24 pt-24">
         {/* Éléments décoratifs harmonieux */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/8 rounded-full blur-3xl floating-animation"></div>
@@ -158,12 +158,12 @@ export default function Home() {
       {/* Services Section */}
       <section id="services" className="relative z-10 px-6 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-slate-800">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
             Technologies Avancées
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div id="modelisation" className="glass-effect rounded-3xl overflow-hidden hover:bg-blue-50/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
+            <div id="modelisation" className="bg-slate-800/60 backdrop-blur-sm border border-slate-600/30 rounded-3xl overflow-hidden hover:bg-slate-700/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
               <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-teal-50 flex items-center justify-center relative overflow-hidden">
                 <Image 
                   src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
@@ -177,18 +177,18 @@ export default function Home() {
                 <div className="absolute top-2 left-2 w-6 h-6 bg-blue-200/50 rounded-full"></div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-slate-800">🧬 Modélisation 3D</h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <h3 className="text-2xl font-bold mb-4 text-white">🧬 Modélisation 3D</h3>
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Création de modèles 3D précis de tumeurs basés sur l&apos;imagerie médicale. 
                   Reconstruction anatomique détaillée pour une analyse approfondie.
                 </p>
-                <div className="text-sm text-teal-700 bg-teal-50 rounded-lg p-3">
+                <div className="text-sm text-teal-300 bg-teal-900/30 rounded-lg p-3">
                   IRM • Scanner • Reconstruction • Visualisation
                 </div>
               </div>
             </div>
 
-            <div id="simulation" className="glass-effect rounded-3xl overflow-hidden hover:bg-blue-50/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl group" style={{animationDelay: '0.1s'}}>
+            <div id="simulation" className="bg-slate-800/60 backdrop-blur-sm border border-slate-600/30 rounded-3xl overflow-hidden hover:bg-slate-700/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group" style={{animationDelay: '0.1s'}}>
               <div className="aspect-[4/3] bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center relative overflow-hidden">
                 <Image 
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
@@ -202,18 +202,18 @@ export default function Home() {
                 <div className="absolute top-2 left-2 w-6 h-6 bg-blue-200/50 rounded-full"></div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-slate-800">⚡ Simulation IA</h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <h3 className="text-2xl font-bold mb-4 text-white">⚡ Simulation IA</h3>
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Simulation de l&apos;évolution tumorale et prédiction de réponse aux traitements. 
                   Algorithmes d&apos;apprentissage automatique pour des prédictions précises.
                 </p>
-                <div className="text-sm text-blue-700 bg-blue-50 rounded-lg p-3">
+                <div className="text-sm text-blue-300 bg-blue-900/30 rounded-lg p-3">
                   Machine Learning • Prédiction • Évolution • Traitement
                 </div>
               </div>
             </div>
 
-            <div id="recherche" className="glass-effect rounded-3xl overflow-hidden hover:bg-blue-50/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl group" style={{animationDelay: '0.2s'}}>
+            <div id="recherche" className="bg-slate-800/60 backdrop-blur-sm border border-slate-600/30 rounded-3xl overflow-hidden hover:bg-slate-700/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group" style={{animationDelay: '0.2s'}}>
               <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-teal-50 flex items-center justify-center relative overflow-hidden">
                 <Image 
                   src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
@@ -227,12 +227,12 @@ export default function Home() {
                 <div className="absolute top-2 left-2 w-6 h-6 bg-blue-200/50 rounded-full"></div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-slate-800">🔬 Recherche</h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <h3 className="text-2xl font-bold mb-4 text-white">🔬 Recherche</h3>
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Plateforme collaborative pour la recherche oncologique. 
                   Partage de données sécurisé et analyses comparatives entre équipes.
                 </p>
-                <div className="text-sm text-slate-700 bg-slate-50 rounded-lg p-3">
+                <div className="text-sm text-slate-300 bg-slate-700/50 rounded-lg p-3">
                   Collaboration • Données • Analyses • Publications
                 </div>
               </div>
@@ -244,16 +244,16 @@ export default function Home() {
       {/* Community Section */}
       <section id="communaute" className="relative z-10 px-6 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-slate-800">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
             Plateforme Collaborative
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl font-bold mb-6 text-slate-800">
+              <h3 className="text-3xl font-bold mb-6 text-white">
                 Rejoignez l&apos;écosystème de recherche médicale
               </h3>
-              <div className="space-y-4 text-slate-600">
+              <div className="space-y-4 text-slate-300">
                 <div className="flex items-center space-x-4 p-4 bg-blue-50/50 rounded-xl">
                   <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
                     <svg className="w-5 h-5 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
@@ -278,17 +278,17 @@ export default function Home() {
                   </div>
                   <span>Analyses comparative et benchmarking</span>
                 </div>
-                <div className="flex items-center space-x-4 p-4 bg-teal-50/50 rounded-xl">
-                  <div className="w-10 h-10 bg-teal-200 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-teal-700" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center space-x-4 p-4 bg-teal-900/20 border border-teal-700/30 rounded-xl">
+                  <div className="w-10 h-10 bg-teal-600/60 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-teal-200" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14 6V4a2 2 0 00-2-2H8a2 2 0 00-2 2v2"/>
                     </svg>
                   </div>
                   <span>Formation et ressources pédagogiques</span>
                 </div>
-                <div className="flex items-center space-x-4 p-4 bg-blue-50/50 rounded-xl">
-                  <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center space-x-4 p-4 bg-blue-900/20 border border-blue-700/30 rounded-xl">
+                  <div className="w-10 h-10 bg-blue-600/60 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"/>
                     </svg>
                   </div>
@@ -297,41 +297,41 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="glass-effect rounded-3xl p-8 bg-gradient-blue-soft/30">
-              <h4 className="text-2xl font-bold mb-6 text-slate-800 text-center">
+            <div className="bg-slate-800/60 backdrop-blur-sm border border-slate-600/30 rounded-3xl p-8">
+              <h4 className="text-2xl font-bold mb-6 text-white text-center">
                 Niveaux d&apos;Accès
               </h4>
               <div className="space-y-4">
-                <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-4 border border-blue-200">
+                <div className="bg-slate-700/40 border border-blue-600/30 rounded-2xl p-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-blue-300 rounded-full flex items-center justify-center">
-                      <span className="text-blue-800 font-bold text-sm">R</span>
+                    <div className="w-8 h-8 bg-blue-600/60 rounded-full flex items-center justify-center">
+                      <span className="text-blue-200 font-bold text-sm">R</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-slate-800">Recherche</div>
-                      <div className="text-sm text-slate-600">Accès modélisation • Données limitées</div>
+                      <div className="font-semibold text-white">Recherche</div>
+                      <div className="text-sm text-slate-300">Accès modélisation • Données limitées</div>
                     </div>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl p-4 border border-teal-300">
+                <div className="bg-slate-700/40 border border-teal-600/30 rounded-2xl p-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-teal-300 rounded-full flex items-center justify-center">
-                      <span className="text-teal-800 font-bold text-sm">P</span>
+                    <div className="w-8 h-8 bg-teal-600/60 rounded-full flex items-center justify-center">
+                      <span className="text-teal-200 font-bold text-sm">P</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-slate-800">Professionnel</div>
-                      <div className="text-sm text-slate-600">Simulation IA • Collaboration étendue</div>
+                      <div className="font-semibold text-white">Professionnel</div>
+                      <div className="text-sm text-slate-300">Simulation IA • Collaboration étendue</div>
                     </div>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-4 border border-indigo-300">
+                <div className="bg-slate-700/40 border border-indigo-600/30 rounded-2xl p-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-indigo-300 rounded-full flex items-center justify-center">
-                      <span className="text-indigo-800 font-bold text-sm">E</span>
+                    <div className="w-8 h-8 bg-indigo-600/60 rounded-full flex items-center justify-center">
+                      <span className="text-indigo-200 font-bold text-sm">E</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-slate-800">Enterprise</div>
-                      <div className="text-sm text-slate-600">API privée • Support dédié • On-premise</div>
+                      <div className="font-semibold text-white">Enterprise</div>
+                      <div className="text-sm text-slate-300">API privée • Support dédié • On-premise</div>
                     </div>
                   </div>
                 </div>
@@ -343,24 +343,24 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="relative z-10 px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center glass-effect rounded-3xl p-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
+        <div className="max-w-4xl mx-auto text-center bg-slate-800/60 backdrop-blur-sm border border-slate-600/30 rounded-3xl p-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Prêt à révolutionner la recherche ?
           </h2>
-          <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+          <p className="text-xl text-slate-300 mb-8 leading-relaxed">
             Rejoignez TumorTwin et accédez aux technologies les plus avancées de modélisation tumorale. 
             Transformez vos recherches avec l&apos;intelligence artificielle et la collaboration mondiale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => setIsContactModalOpen(true)}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-full shadow-2xl hover:shadow-blue-300/50 hover:scale-105 transition-all duration-300 transform text-lg"
+              className="px-8 py-4 bg-white text-slate-900 font-semibold rounded-full shadow-2xl hover:bg-slate-100 hover:scale-105 transition-all duration-300 transform text-lg"
             >
               Demander un accès
             </button>
             <a 
               href="#services"
-              className="px-8 py-4 glass-effect text-teal-700 font-semibold rounded-full hover:bg-teal-50/90 transition-all duration-300 text-lg border border-teal-200"
+              className="px-8 py-4 bg-slate-700/60 backdrop-blur-sm border border-slate-500/50 text-slate-200 font-semibold rounded-full hover:bg-slate-600/70 transition-all duration-300 text-lg"
             >
               Découvrir la plateforme
             </a>
@@ -369,21 +369,21 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 px-6 py-12 border-t border-blue-200/30">
+      <footer className="relative z-10 px-6 py-12 border-t border-slate-600/30">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent mb-4">
+              <div className="text-2xl font-bold text-white mb-4">
                 TumorTwin
               </div>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-300 text-sm">
                 Plateforme de jumeaux numériques pour la recherche oncologique et l&apos;intelligence artificielle médicale.
               </p>
             </div>
             
             <div>
-              <h4 className="font-semibold text-slate-800 mb-3">Technologies</h4>
-              <div className="space-y-2 text-sm text-slate-600">
+              <h4 className="font-semibold text-white mb-3">Technologies</h4>
+              <div className="space-y-2 text-sm text-slate-300">
                 <div>Modélisation 3D</div>
                 <div>Simulation IA</div>
                 <div>Recherche Collaborative</div>
@@ -392,8 +392,8 @@ export default function Home() {
             </div>
             
             <div>
-              <h4 className="font-semibold text-slate-800 mb-3">Support</h4>
-              <div className="space-y-2 text-sm text-slate-600">
+              <h4 className="font-semibold text-white mb-3">Support</h4>
+              <div className="space-y-2 text-sm text-slate-300">
                 <div>Documentation API</div>
                 <div>Formation</div>
                 <div>Support technique</div>
@@ -402,8 +402,8 @@ export default function Home() {
             </div>
             
             <div>
-              <h4 className="font-semibold text-slate-800 mb-3">Contact</h4>
-              <div className="space-y-2 text-sm text-slate-600">
+              <h4 className="font-semibold text-white mb-3">Contact</h4>
+              <div className="space-y-2 text-sm text-slate-300">
                 <div>research@tumortwin.com</div>
                 <div>+33 1 23 45 67 89</div>
                 <div>Paris, France</div>
@@ -412,8 +412,8 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="text-center pt-8 border-t border-blue-200/20">
-            <p className="text-slate-600">
+          <div className="text-center pt-8 border-t border-slate-600/30">
+            <p className="text-slate-300">
               © 2025 TumorTwin. Tous droits réservés. Plateforme certifiée ISO 27001 pour la sécurité des données médicales.
             </p>
           </div>
