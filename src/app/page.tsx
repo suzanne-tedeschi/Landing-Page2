@@ -11,84 +11,92 @@ export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false)
 
   return (
-    <main className="min-h-screen bg-gradient-blue-soft overflow-hidden relative">
-      {/* Constellation Background */}
-      <ConstellationBackground />
-      
-      {/* Subtle decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-200/10 rounded-full blur-3xl floating-animation"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-teal-200/8 rounded-full blur-3xl floating-animation" style={{animationDelay: '-3s'}}></div>
-      </div>
-
-      {/* Navigation */}
-      <nav className="relative z-10 px-6 py-6">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-2xl font-display font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
-            TumorTwin
-          </div>
-          <div className="hidden md:flex space-x-8 text-slate-600 font-medium">
-            <a href="#features" className="hover:text-blue-600 transition-colors duration-300">Fonctionnalités</a>
-            <a href="#about" className="hover:text-blue-600 transition-colors duration-300">À propos</a>
-            <a href="#pricing" className="hover:text-blue-600 transition-colors duration-300">Tarifs</a>
-            <a href="#contact" className="hover:text-blue-600 transition-colors duration-300">Contact</a>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="relative z-10 px-6 py-20 text-center">
-        <div className="max-w-5xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-700 text-sm font-medium mb-8 animate-fade-in-down">
-            <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></span>
-            Nouvelle génération de jumeaux numériques
-          </div>
-
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-8 animate-fade-in-up">
-            <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-teal-500 bg-clip-text text-transparent block mb-4">
+    <>
+      {/* Hero Section avec constellation */}
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
+        {/* Constellation Background uniquement pour le hero */}
+        <ConstellationBackground />
+        
+        {/* Navigation */}
+        <nav className="relative z-10 px-6 py-6">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            <div className="text-2xl font-display font-bold text-white">
               TumorTwin
-            </span>
-            <span className="text-2xl md:text-3xl lg:text-4xl font-light text-slate-600 tracking-wide">
-              L&apos;avenir de la recherche oncologique
-            </span>
-          </h1>
-          
-          {/* Description */}
-          <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            Transformez vos données d&apos;imagerie médicale en <strong className="text-blue-600">modèles 3D interactifs</strong>. 
-            Simulez l&apos;évolution tumorale avec une précision inégalée grâce à l&apos;IA.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-            <button 
-              onClick={() => setIsContactModalOpen(true)}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-2xl shadow-2xl hover:shadow-blue-400/40 hover:scale-105 transition-all duration-300 text-lg"
-            >
-              Demander une démo
-            </button>
-            <a 
-              href="#features"
-              className="px-8 py-4 bg-white/80 backdrop-blur-sm text-slate-700 font-semibold rounded-2xl border border-slate-200 hover:bg-white hover:shadow-xl transition-all duration-300 text-lg"
-            >
-              Découvrir les fonctionnalités
-            </a>
-          </div>
-
-          {/* Newsletter Subscription - Connected to Supabase */}
-          <div className="max-w-xl mx-auto mb-16 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-            <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-blue-200/30 shadow-xl">
-              <h3 className="text-xl font-semibold text-slate-800 mb-6 text-center">
-                Rejoignez la liste d&apos;attente
-              </h3>
-              <NewsletterForm />
+            </div>
+            <div className="hidden md:flex space-x-8 text-slate-300 font-medium">
+              <a href="#features" className="hover:text-white transition-colors duration-300">Fonctionnalités</a>
+              <a href="#about" className="hover:text-white transition-colors duration-300">À propos</a>
+              <a href="#pricing" className="hover:text-white transition-colors duration-300">Tarifs</a>
+              <a href="#contact" className="hover:text-white transition-colors duration-300">Contact</a>
             </div>
           </div>
+        </nav>
 
-          {/* Hero Visual */}
-          <div className="relative max-w-4xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+        {/* Hero Content */}
+        <div className="relative z-10 px-6 py-20 text-center">
+          <div className="max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium mb-8 animate-fade-in-down">
+              <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 animate-pulse"></span>
+              Nouvelle génération de jumeaux numériques
+            </div>
+
+            {/* Main Heading */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-8 animate-fade-in-up">
+              <span className="text-white block mb-4">
+                TumorTwin
+              </span>
+              <span className="text-2xl md:text-3xl lg:text-4xl font-light text-slate-300 tracking-wide">
+                L&apos;avenir de la recherche oncologique
+              </span>
+            </h1>
+            
+            {/* Description */}
+            <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              Transformez vos données d&apos;imagerie médicale en <strong className="text-blue-300">modèles 3D interactifs</strong>. 
+              Simulez l&apos;évolution tumorale avec une précision inégalée grâce à l&apos;IA.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+              <button 
+                onClick={() => setIsContactModalOpen(true)}
+                className="px-8 py-4 bg-white text-slate-900 font-semibold rounded-2xl shadow-2xl hover:bg-slate-100 hover:scale-105 transition-all duration-300 text-lg"
+              >
+                Demander une démo
+              </button>
+              <a 
+                href="#features"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-2xl border border-white/20 hover:bg-white/20 hover:shadow-xl transition-all duration-300 text-lg"
+              >
+                Découvrir les fonctionnalités
+              </a>
+            </div>
+
+            {/* Newsletter Subscription */}
+            <div className="max-w-xl mx-auto mb-16 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-xl">
+                <h3 className="text-xl font-semibold text-white mb-6 text-center">
+                  Rejoignez la liste d&apos;attente
+                </h3>
+                <NewsletterForm />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reste du contenu avec fond clair */}
+      <main className="bg-gradient-blue-soft relative">
+        {/* Subtle decorative elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-blue-200/10 rounded-full blur-3xl floating-animation"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-teal-200/8 rounded-full blur-3xl floating-animation" style={{animationDelay: '-3s'}}></div>
+        </div>
+
+        {/* Hero Visual Section */}
+        <section className="relative z-10 px-6 py-20">
+          <div className="max-w-4xl mx-auto animate-fade-in-up">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-700">
               <div className="aspect-[16/9] relative">
                 <Image 
@@ -130,8 +138,7 @@ export default function Home() {
             <div className="absolute -top-12 -left-12 w-24 h-24 bg-blue-200/30 rounded-full blur-2xl animate-float"></div>
             <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-teal-200/30 rounded-full blur-2xl animate-float" style={{animationDelay: '-2s'}}></div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Section */}
       <section id="services" className="relative z-10 px-6 py-20">
@@ -402,6 +409,7 @@ export default function Home() {
       <Modal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)}>
         <ContactForm onClose={() => setIsContactModalOpen(false)} />
       </Modal>
-    </main>
+      </main>
+    </>
   );
 }
