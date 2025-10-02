@@ -102,8 +102,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Transition invisible - même dégradé que le hero */}
-      <div className="h-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative z-5"></div>
+      {/* Transition invisible - dégradé inversé pour continuité parfaite */}
+      <div className="h-0 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900 relative z-5"></div>
 
       {/* Reste du contenu avec exactement la même palette */}
       <main className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative">
