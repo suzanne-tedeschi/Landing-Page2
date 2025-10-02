@@ -96,17 +96,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Transition dégradée fluide en tons bleus */}
-      <div className="h-40 bg-gradient-to-b from-slate-800 via-blue-800/90 to-blue-700/70 relative z-5"></div>
+      {/* Transition dégradée douce */}
+      <div className="h-20 bg-gradient-to-b from-slate-800 via-blue-900/80 to-slate-700 relative z-5"></div>
 
-      {/* Reste du contenu avec fond bleu harmonisé */}
-      <main className="bg-gradient-to-br from-blue-700 via-blue-600 to-blue-800 relative -mt-40 pt-40">
-        {/* Éléments décoratifs harmonieux en tons bleus */}
+      {/* Reste du contenu avec la même palette que le hero */}
+      <main className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative -mt-20 pt-20">
+        {/* Éléments décoratifs harmonieux dans les tons du hero */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-blue-400/8 rounded-full blur-3xl floating-animation"></div>
-          <div className="absolute top-1/3 right-20 w-80 h-80 bg-blue-300/6 rounded-full blur-3xl floating-animation" style={{animationDelay: '-2s'}}></div>
-          <div className="absolute bottom-40 left-1/3 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl floating-animation" style={{animationDelay: '-4s'}}></div>
-          <div className="absolute top-2/3 right-1/4 w-64 h-64 bg-blue-200/8 rounded-full blur-3xl floating-animation" style={{animationDelay: '-3s'}}></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-slate-400/5 rounded-full blur-3xl floating-animation"></div>
+          <div className="absolute top-1/3 right-20 w-80 h-80 bg-blue-400/6 rounded-full blur-3xl floating-animation" style={{animationDelay: '-2s'}}></div>
+          <div className="absolute bottom-40 left-1/3 w-72 h-72 bg-slate-300/4 rounded-full blur-3xl floating-animation" style={{animationDelay: '-4s'}}></div>
+          <div className="absolute top-2/3 right-1/4 w-64 h-64 bg-blue-300/5 rounded-full blur-3xl floating-animation" style={{animationDelay: '-3s'}}></div>
           <div className="absolute bottom-20 left-1/6 w-88 h-88 bg-teal-400/6 rounded-full blur-3xl floating-animation" style={{animationDelay: '-1s'}}></div>
         </div>
 
@@ -164,7 +164,7 @@ export default function Home() {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div id="modelisation" className="bg-blue-800/60 backdrop-blur-sm border border-blue-500/30 rounded-3xl overflow-hidden hover:bg-blue-700/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
+            <div id="modelisation" className="bg-slate-800/60 backdrop-blur-sm border border-slate-600/30 rounded-3xl overflow-hidden hover:bg-slate-700/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
               <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-teal-50 flex items-center justify-center relative overflow-hidden">
                 <Image 
                   src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
@@ -189,7 +189,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div id="simulation" className="bg-blue-800/60 backdrop-blur-sm border border-blue-500/30 rounded-3xl overflow-hidden hover:bg-blue-700/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group" style={{animationDelay: '0.1s'}}>
+            <div id="simulation" className="bg-slate-800/60 backdrop-blur-sm border border-slate-600/30 rounded-3xl overflow-hidden hover:bg-slate-700/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group" style={{animationDelay: '0.1s'}}>
               <div className="aspect-[4/3] bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center relative overflow-hidden">
                 <Image 
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
@@ -214,7 +214,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div id="recherche" className="bg-blue-800/60 backdrop-blur-sm border border-blue-500/30 rounded-3xl overflow-hidden hover:bg-blue-700/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group" style={{animationDelay: '0.2s'}}>
+            <div id="recherche" className="bg-slate-800/60 backdrop-blur-sm border border-slate-600/30 rounded-3xl overflow-hidden hover:bg-slate-700/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl group" style={{animationDelay: '0.2s'}}>
               <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-teal-50 flex items-center justify-center relative overflow-hidden">
                 <Image 
                   src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
@@ -255,41 +255,41 @@ export default function Home() {
                 Rejoignez l&apos;écosystème de recherche médicale
               </h3>
               <div className="space-y-4 text-slate-300">
-                <div className="flex items-center space-x-4 p-4 bg-blue-50/50 rounded-xl">
-                  <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center space-x-4 p-4 bg-slate-700/40 border border-slate-600/50 rounded-xl">
+                  <div className="w-10 h-10 bg-blue-600/60 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                   </div>
                   <span>Accès aux outils de modélisation avancés</span>
                 </div>
-                <div className="flex items-center space-x-4 p-4 bg-teal-50/50 rounded-xl">
-                  <div className="w-10 h-10 bg-teal-200 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-teal-700" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center space-x-4 p-4 bg-slate-700/40 border border-slate-600/50 rounded-xl">
+                  <div className="w-10 h-10 bg-teal-600/60 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-teal-200" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
                     </svg>
                   </div>
                   <span>Collaboration avec équipes internationales</span>
                 </div>
-                <div className="flex items-center space-x-4 p-4 bg-blue-50/50 rounded-xl">
-                  <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center space-x-4 p-4 bg-slate-700/40 border border-slate-600/50 rounded-xl">
+                  <div className="w-10 h-10 bg-blue-600/60 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
                     </svg>
                   </div>
                   <span>Analyses comparative et benchmarking</span>
                 </div>
-                <div className="flex items-center space-x-4 p-4 bg-blue-800/30 border border-blue-600/40 rounded-xl">
-                  <div className="w-10 h-10 bg-blue-500/70 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-blue-100" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center space-x-4 p-4 bg-slate-700/40 border border-slate-600/50 rounded-xl">
+                  <div className="w-10 h-10 bg-teal-600/60 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-teal-200" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14 6V4a2 2 0 00-2-2H8a2 2 0 00-2 2v2"/>
                     </svg>
                   </div>
                   <span>Formation et ressources pédagogiques</span>
                 </div>
-                <div className="flex items-center space-x-4 p-4 bg-blue-800/30 border border-blue-600/40 rounded-xl">
-                  <div className="w-10 h-10 bg-blue-500/70 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-blue-100" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center space-x-4 p-4 bg-slate-700/40 border border-slate-600/50 rounded-xl">
+                  <div className="w-10 h-10 bg-blue-600/60 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"/>
                     </svg>
                   </div>
@@ -298,15 +298,15 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="bg-blue-800/60 backdrop-blur-sm border border-blue-500/30 rounded-3xl p-8">
+            <div className="bg-slate-800/60 backdrop-blur-sm border border-slate-600/30 rounded-3xl p-8">
               <h4 className="text-2xl font-bold mb-6 text-white text-center">
                 Niveaux d&apos;Accès
               </h4>
               <div className="space-y-4">
-                <div className="bg-blue-700/50 border border-blue-500/40 rounded-2xl p-4">
+                <div className="bg-slate-700/50 border border-blue-600/40 rounded-2xl p-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-blue-500/70 rounded-full flex items-center justify-center">
-                      <span className="text-blue-100 font-bold text-sm">R</span>
+                    <div className="w-8 h-8 bg-blue-600/60 rounded-full flex items-center justify-center">
+                      <span className="text-blue-200 font-bold text-sm">R</span>
                     </div>
                     <div>
                       <div className="font-semibold text-white">Recherche</div>
@@ -314,10 +314,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-blue-700/50 border border-teal-500/40 rounded-2xl p-4">
+                <div className="bg-slate-700/50 border border-teal-600/40 rounded-2xl p-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-teal-500/70 rounded-full flex items-center justify-center">
-                      <span className="text-teal-100 font-bold text-sm">P</span>
+                    <div className="w-8 h-8 bg-teal-600/60 rounded-full flex items-center justify-center">
+                      <span className="text-teal-200 font-bold text-sm">P</span>
                     </div>
                     <div>
                       <div className="font-semibold text-white">Professionnel</div>
@@ -325,10 +325,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-blue-700/50 border border-indigo-500/40 rounded-2xl p-4">
+                <div className="bg-slate-700/50 border border-indigo-600/40 rounded-2xl p-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-indigo-500/70 rounded-full flex items-center justify-center">
-                      <span className="text-indigo-100 font-bold text-sm">E</span>
+                    <div className="w-8 h-8 bg-indigo-600/60 rounded-full flex items-center justify-center">
+                      <span className="text-indigo-200 font-bold text-sm">E</span>
                     </div>
                     <div>
                       <div className="font-semibold text-white">Enterprise</div>
@@ -344,7 +344,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="relative z-10 px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center bg-blue-800/60 backdrop-blur-sm border border-blue-500/30 rounded-3xl p-12">
+        <div className="max-w-4xl mx-auto text-center bg-slate-800/60 backdrop-blur-sm border border-slate-600/30 rounded-3xl p-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Prêt à révolutionner la recherche ?
           </h2>
@@ -361,7 +361,7 @@ export default function Home() {
             </button>
             <a 
               href="#services"
-              className="px-8 py-4 bg-blue-700/60 backdrop-blur-sm border border-blue-500/50 text-blue-100 font-semibold rounded-full hover:bg-blue-600/70 transition-all duration-300 text-lg"
+              className="px-8 py-4 bg-slate-700/60 backdrop-blur-sm border border-slate-500/50 text-slate-200 font-semibold rounded-full hover:bg-slate-600/70 transition-all duration-300 text-lg"
             >
               Découvrir la plateforme
             </a>
@@ -370,7 +370,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 px-6 py-12 border-t border-blue-500/30">
+      <footer className="relative z-10 px-6 py-12 border-t border-slate-600/30">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -413,7 +413,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="text-center pt-8 border-t border-blue-500/30">
+          <div className="text-center pt-8 border-t border-slate-600/30">
             <p className="text-slate-300">
               © 2025 TumorTwin. Tous droits réservés. Plateforme certifiée ISO 27001 pour la sécurité des données médicales.
             </p>
