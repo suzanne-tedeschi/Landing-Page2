@@ -96,6 +96,7 @@ export default function Home() {
                   width={1200}
                   height={675}
                   priority
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 via-transparent to-transparent"></div>
                 
