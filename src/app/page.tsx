@@ -11,9 +11,9 @@ export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false)
 
   return (
-    <>
+    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       {/* Hero Section avec constellation */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden">
         {/* Constellation Background uniquement pour le hero */}
         <ConstellationBackground />
         
@@ -102,11 +102,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Transition invisible - dégradé inversé pour continuité parfaite */}
-      <div className="h-0 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900 relative z-5"></div>
-
-      {/* Reste du contenu avec exactement la même palette */}
-      <main className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative">
+      {/* Reste du contenu - fond transparent pour continuité parfaite */}
+      <main className="relative">
         {/* Éléments décoratifs harmonieux dans les tons du hero */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-10 w-96 h-96 bg-slate-400/5 rounded-full blur-3xl floating-animation"></div>
@@ -432,6 +429,6 @@ export default function Home() {
         <ContactForm onClose={() => setIsContactModalOpen(false)} />
       </Modal>
       </main>
-    </>
+    </div>
   );
 }
