@@ -26,10 +26,10 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    // Configuration plus riche
-    const particleCount = 120
-    const maxDistance = 130
-    const speed = 0.4
+    // Configuration enrichie
+    const particleCount = 150
+    const maxDistance = 140
+    const speed = 0.6
 
     // Fonction pour redimensionner le canvas
     const resizeCanvas = () => {
@@ -44,9 +44,9 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
         particlesRef.current.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * speed,
-          vy: (Math.random() - 0.5) * speed,
-          size: Math.random() * 2 + 0.3
+          vx: (Math.random() - 0.5) * speed * (0.5 + Math.random() * 0.8),
+          vy: (Math.random() - 0.5) * speed * (0.5 + Math.random() * 0.8),
+          size: Math.random() * 2.5 + 0.2
         })
       }
     }
