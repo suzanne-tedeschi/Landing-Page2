@@ -17,7 +17,7 @@ export default function Home() {
         {/* Constellation Background uniquement pour le hero */}
         <ConstellationBackground />
         
-        {/* Étoiles scintillantes supplémentaires */}
+        {/* Étoiles scintillantes enrichies */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse opacity-80"></div>
           <div className="absolute top-32 right-1/3 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse opacity-60" style={{animationDelay: '1s'}}></div>
@@ -25,6 +25,12 @@ export default function Home() {
           <div className="absolute bottom-1/3 right-1/4 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse opacity-50" style={{animationDelay: '3s'}}></div>
           <div className="absolute top-3/4 left-2/3 w-1 h-1 bg-white rounded-full animate-pulse opacity-60" style={{animationDelay: '1.5s'}}></div>
           <div className="absolute top-1/4 right-1/5 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse opacity-80" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute top-10 left-1/2 w-0.5 h-0.5 bg-white rounded-full animate-pulse opacity-70" style={{animationDelay: '4s'}}></div>
+          <div className="absolute bottom-20 right-1/6 w-1 h-1 bg-blue-300 rounded-full animate-pulse opacity-60" style={{animationDelay: '2.5s'}}></div>
+          <div className="absolute top-2/3 left-1/5 w-0.5 h-0.5 bg-white rounded-full animate-pulse opacity-50" style={{animationDelay: '3.5s'}}></div>
+          <div className="absolute bottom-1/2 right-2/3 w-1.5 h-1.5 bg-blue-100 rounded-full animate-pulse opacity-80" style={{animationDelay: '1.2s'}}></div>
+          <div className="absolute top-1/3 left-3/4 w-0.5 h-0.5 bg-white rounded-full animate-pulse opacity-65" style={{animationDelay: '0.8s'}}></div>
+          <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-blue-200 rounded-full animate-pulse opacity-75" style={{animationDelay: '2.8s'}}></div>
         </div>
         
         {/* Navigation */}
@@ -96,11 +102,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Transition dégradée douce */}
-      <div className="h-20 bg-gradient-to-b from-slate-800 via-blue-900/80 to-slate-700 relative z-5"></div>
+      {/* Transition invisible - même dégradé que le hero */}
+      <div className="h-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative z-5"></div>
 
-      {/* Reste du contenu avec la même palette que le hero */}
-      <main className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative -mt-20 pt-20">
+      {/* Reste du contenu avec exactement la même palette */}
+      <main className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative">
         {/* Éléments décoratifs harmonieux dans les tons du hero */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-10 w-96 h-96 bg-slate-400/5 rounded-full blur-3xl floating-animation"></div>

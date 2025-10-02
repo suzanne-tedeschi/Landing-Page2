@@ -12,9 +12,15 @@ interface Particle {
 
 interface ConstellationBackgroundProps {
   height?: string
+  density?: number
+  speed?: number
 }
 
-export default function ConstellationBackground({ height = "100vh" }: ConstellationBackgroundProps) {
+export default function ConstellationBackgroundExtended({ 
+  height = "100vh", 
+  density = 80,
+  speed = 0.8 
+}: ConstellationBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const particlesRef = useRef<Particle[]>([])
   const animationRef = useRef<number>()
@@ -26,10 +32,9 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    // Configuration très enrichie
-    const particleCount = 200
-    const maxDistance = 150
-    const speed = 1.0
+    // Configuration pour extension
+    const particleCount = density
+    const maxDistance = 120
 
     // Fonction pour redimensionner le canvas
     const resizeCanvas = () => {
@@ -44,9 +49,9 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
         particlesRef.current.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * speed * (0.3 + Math.random() * 1.2),
-          vy: (Math.random() - 0.5) * speed * (0.3 + Math.random() * 1.2),
-          size: Math.random() * 3 + 0.1
+          vx: (Math.random() - 0.5) * speed * (0.4 + Math.random() * 0.8),
+          vy: (Math.random() - 0.5) * speed * (0.4 + Math.random() * 0.8),
+          size: Math.random() * 2 + 0.3
         })
       }
     }
@@ -57,7 +62,7 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
 
       // Mettre à jour et dessiner les particules
       particlesRef.current.forEach((particle, i) => {
-        // Mouvement lent et fluide
+        // Mouvement
         particle.x += particle.vx
         particle.y += particle.vy
 
@@ -69,19 +74,19 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
         particle.x = Math.max(0, Math.min(canvas.width, particle.x))
         particle.y = Math.max(0, Math.min(canvas.height, particle.y))
 
-        // Dessiner la particule avec effet de glow variable
-        const glowIntensity = 0.6 + Math.sin(Date.now() * 0.001 + i) * 0.2
+        // Dessiner la particule avec effet de glow
+        const glowIntensity = 0.5 + Math.sin(Date.now() * 0.001 + i) * 0.15
         
-        // Halo externe
+        // Halo externe très subtil
         ctx.beginPath()
-        ctx.arc(particle.x, particle.y, particle.size * 4, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(255, 255, 255, ${glowIntensity * 0.1})`
+        ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(255, 255, 255, ${glowIntensity * 0.08})`
         ctx.fill()
         
         // Point principal
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(255, 255, 255, ${glowIntensity})`
+        ctx.fillStyle = `rgba(255, 255, 255, ${glowIntensity * 0.6})`
         ctx.fill()
 
         // Dessiner les connexions
@@ -95,12 +100,12 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
             ctx.moveTo(particle.x, particle.y)
             ctx.lineTo(otherParticle.x, otherParticle.y)
             
-            // Opacité plus variée basée sur la distance
-            const baseOpacity = (1 - distance / maxDistance) * 0.2
-            const pulseOpacity = Math.sin(Date.now() * 0.002) * 0.05
+            // Opacité très subtile
+            const baseOpacity = (1 - distance / maxDistance) * 0.12
+            const pulseOpacity = Math.sin(Date.now() * 0.002) * 0.03
             const opacity = baseOpacity + pulseOpacity
             ctx.strokeStyle = `rgba(255, 255, 255, ${Math.max(0, opacity)})`
-            ctx.lineWidth = 0.6
+            ctx.lineWidth = 0.4
             ctx.stroke()
           }
         })
@@ -129,7 +134,7 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
       }
       window.removeEventListener('resize', handleResize)
     }
-  }, [])
+  }, [density, speed])
 
   return (
     <canvas
