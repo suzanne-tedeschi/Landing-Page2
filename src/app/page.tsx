@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import NewsletterForm from '@/components/NewsletterForm'
 import ContactForm from '@/components/ContactForm'
 import Modal from '@/components/Modal'
@@ -48,14 +49,14 @@ export default function Home() {
               TumorTwin
             </span>
             <span className="text-2xl md:text-3xl lg:text-4xl font-light text-slate-600 tracking-wide">
-              L'avenir de la recherche oncologique
+              L&apos;avenir de la recherche oncologique
             </span>
           </h1>
           
           {/* Description */}
           <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            Transformez vos données d'imagerie médicale en <strong className="text-blue-600">modèles 3D interactifs</strong>. 
-            Simulez l'évolution tumorale avec une précision inégalée grâce à l'IA.
+            Transformez vos données d&apos;imagerie médicale en <strong className="text-blue-600">modèles 3D interactifs</strong>. 
+            Simulez l&apos;évolution tumorale avec une précision inégalée grâce à l&apos;IA.
           </p>
 
           {/* CTA Buttons */}
@@ -78,7 +79,7 @@ export default function Home() {
           <div className="max-w-xl mx-auto mb-16 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-blue-200/30 shadow-xl">
               <h3 className="text-xl font-semibold text-slate-800 mb-6 text-center">
-                Rejoignez la liste d'attente
+                Rejoignez la liste d&apos;attente
               </h3>
               <NewsletterForm />
             </div>
@@ -88,10 +89,13 @@ export default function Home() {
           <div className="relative max-w-4xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s'}}>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-700">
               <div className="aspect-[16/9] relative">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
                   alt="Interface de modélisation 3D TumorTwin" 
                   className="w-full h-full object-cover"
+                  width={1200}
+                  height={675}
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 via-transparent to-transparent"></div>
                 
@@ -136,10 +140,12 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <div id="modelisation" className="glass-effect rounded-3xl overflow-hidden hover:bg-blue-50/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
               <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-teal-50 flex items-center justify-center relative overflow-hidden">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
                   alt="Modélisation 3D de tumeurs" 
                   className="w-full h-full object-cover"
+                  width={1000}
+                  height={750}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
                 <div className="absolute bottom-2 right-2 w-8 h-8 bg-teal-300/50 rounded-full"></div>
@@ -148,7 +154,7 @@ export default function Home() {
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-4 text-slate-800">🧬 Modélisation 3D</h3>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  Création de modèles 3D précis de tumeurs basés sur l'imagerie médicale. 
+                  Création de modèles 3D précis de tumeurs basés sur l&apos;imagerie médicale. 
                   Reconstruction anatomique détaillée pour une analyse approfondie.
                 </p>
                 <div className="text-sm text-teal-700 bg-teal-50 rounded-lg p-3">
@@ -159,10 +165,12 @@ export default function Home() {
 
             <div id="simulation" className="glass-effect rounded-3xl overflow-hidden hover:bg-blue-50/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl group" style={{animationDelay: '0.1s'}}>
               <div className="aspect-[4/3] bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center relative overflow-hidden">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
                   alt="Intelligence artificielle et analyse de données médicales" 
                   className="w-full h-full object-cover"
+                  width={1000}
+                  height={750}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
                 <div className="absolute bottom-2 right-2 w-8 h-8 bg-teal-300/50 rounded-full"></div>
@@ -171,8 +179,8 @@ export default function Home() {
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-4 text-slate-800">⚡ Simulation IA</h3>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  Simulation de l'évolution tumorale et prédiction de réponse aux traitements. 
-                  Algorithmes d'apprentissage automatique pour des prédictions précises.
+                  Simulation de l&apos;évolution tumorale et prédiction de réponse aux traitements. 
+                  Algorithmes d&apos;apprentissage automatique pour des prédictions précises.
                 </p>
                 <div className="text-sm text-blue-700 bg-blue-50 rounded-lg p-3">
                   Machine Learning • Prédiction • Évolution • Traitement
@@ -182,10 +190,12 @@ export default function Home() {
 
             <div id="recherche" className="glass-effect rounded-3xl overflow-hidden hover:bg-blue-50/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl group" style={{animationDelay: '0.2s'}}>
               <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-teal-50 flex items-center justify-center relative overflow-hidden">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
                   alt="Recherche médicale collaborative" 
                   className="w-full h-full object-cover"
+                  width={1000}
+                  height={750}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
                 <div className="absolute bottom-2 right-2 w-8 h-8 bg-teal-300/50 rounded-full"></div>
@@ -216,7 +226,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6 text-slate-800">
-                Rejoignez l'écosystème de recherche médicale
+                Rejoignez l&apos;écosystème de recherche médicale
               </h3>
               <div className="space-y-4 text-slate-600">
                 <div className="flex items-center space-x-4 p-4 bg-blue-50/50 rounded-xl">
@@ -264,7 +274,7 @@ export default function Home() {
             
             <div className="glass-effect rounded-3xl p-8 bg-gradient-blue-soft/30">
               <h4 className="text-2xl font-bold mb-6 text-slate-800 text-center">
-                Niveaux d'Accès
+                Niveaux d&apos;Accès
               </h4>
               <div className="space-y-4">
                 <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-4 border border-blue-200">
@@ -314,7 +324,7 @@ export default function Home() {
           </h2>
           <p className="text-xl text-slate-600 mb-8 leading-relaxed">
             Rejoignez TumorTwin et accédez aux technologies les plus avancées de modélisation tumorale. 
-            Transformez vos recherches avec l'intelligence artificielle et la collaboration mondiale.
+            Transformez vos recherches avec l&apos;intelligence artificielle et la collaboration mondiale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
@@ -342,7 +352,7 @@ export default function Home() {
                 TumorTwin
               </div>
               <p className="text-slate-600 text-sm">
-                Plateforme de jumeaux numériques pour la recherche oncologique et l'intelligence artificielle médicale.
+                Plateforme de jumeaux numériques pour la recherche oncologique et l&apos;intelligence artificielle médicale.
               </p>
             </div>
             
