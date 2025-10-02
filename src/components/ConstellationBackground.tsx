@@ -26,10 +26,10 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    // Configuration plus subtile
-    const particleCount = 50
-    const maxDistance = 120
-    const speed = 0.2
+    // Configuration plus riche
+    const particleCount = 120
+    const maxDistance = 130
+    const speed = 0.15
 
     // Fonction pour redimensionner le canvas
     const resizeCanvas = () => {
@@ -46,7 +46,7 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * speed,
           vy: (Math.random() - 0.5) * speed,
-          size: Math.random() * 1.5 + 0.5
+          size: Math.random() * 2 + 0.3
         })
       }
     }
@@ -69,10 +69,19 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
         particle.x = Math.max(0, Math.min(canvas.width, particle.x))
         particle.y = Math.max(0, Math.min(canvas.height, particle.y))
 
-        // Dessiner la particule (point simple et élégant)
+        // Dessiner la particule avec effet de glow variable
+        const glowIntensity = 0.6 + Math.sin(Date.now() * 0.001 + i) * 0.2
+        
+        // Halo externe
+        ctx.beginPath()
+        ctx.arc(particle.x, particle.y, particle.size * 4, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(255, 255, 255, ${glowIntensity * 0.1})`
+        ctx.fill()
+        
+        // Point principal
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'
+        ctx.fillStyle = `rgba(255, 255, 255, ${glowIntensity})`
         ctx.fill()
 
         // Dessiner les connexions
@@ -86,10 +95,12 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
             ctx.moveTo(particle.x, particle.y)
             ctx.lineTo(otherParticle.x, otherParticle.y)
             
-            // Opacité très subtile basée sur la distance
-            const opacity = (1 - distance / maxDistance) * 0.15
-            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`
-            ctx.lineWidth = 0.5
+            // Opacité plus variée basée sur la distance
+            const baseOpacity = (1 - distance / maxDistance) * 0.2
+            const pulseOpacity = Math.sin(Date.now() * 0.002) * 0.05
+            const opacity = baseOpacity + pulseOpacity
+            ctx.strokeStyle = `rgba(255, 255, 255, ${Math.max(0, opacity)})`
+            ctx.lineWidth = 0.6
             ctx.stroke()
           }
         })

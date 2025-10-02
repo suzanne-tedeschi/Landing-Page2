@@ -17,6 +17,16 @@ export default function Home() {
         {/* Constellation Background uniquement pour le hero */}
         <ConstellationBackground />
         
+        {/* Étoiles scintillantes supplémentaires */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse opacity-80"></div>
+          <div className="absolute top-32 right-1/3 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse opacity-60" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-white rounded-full animate-pulse opacity-70" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-1/3 right-1/4 w-0.5 h-0.5 bg-blue-100 rounded-full animate-pulse opacity-50" style={{animationDelay: '3s'}}></div>
+          <div className="absolute top-3/4 left-2/3 w-1 h-1 bg-white rounded-full animate-pulse opacity-60" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute top-1/4 right-1/5 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse opacity-80" style={{animationDelay: '0.5s'}}></div>
+        </div>
+        
         {/* Navigation */}
         <nav className="relative z-10 px-6 py-6">
           <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -86,12 +96,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Transition dégradée */}
+      <div className="h-32 bg-gradient-to-b from-slate-800 via-slate-700/50 to-transparent relative z-5"></div>
+
       {/* Reste du contenu avec fond clair */}
-      <main className="bg-gradient-blue-soft relative">
-        {/* Subtle decorative elements */}
+      <main className="bg-gradient-blue-soft relative -mt-32 pt-32">
+        {/* Éléments décoratifs harmonieux */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-blue-200/10 rounded-full blur-3xl floating-animation"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-teal-200/8 rounded-full blur-3xl floating-animation" style={{animationDelay: '-3s'}}></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/8 rounded-full blur-3xl floating-animation"></div>
+          <div className="absolute top-1/3 right-20 w-80 h-80 bg-teal-200/6 rounded-full blur-3xl floating-animation" style={{animationDelay: '-2s'}}></div>
+          <div className="absolute bottom-40 left-1/3 w-72 h-72 bg-slate-200/5 rounded-full blur-3xl floating-animation" style={{animationDelay: '-4s'}}></div>
+          <div className="absolute top-2/3 right-1/4 w-64 h-64 bg-blue-100/8 rounded-full blur-3xl floating-animation" style={{animationDelay: '-3s'}}></div>
         </div>
 
         {/* Hero Visual Section */}
