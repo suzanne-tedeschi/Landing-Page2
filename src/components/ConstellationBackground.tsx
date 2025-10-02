@@ -26,9 +26,9 @@ export default function ConstellationBackground({ height = "100vh" }: Constellat
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    // Configuration très enrichie
-    const particleCount = 200
-    const maxDistance = 150
+    // Configuration très enrichie - densité maximale
+    const particleCount = 350
+    const maxDistance = 120 // Réduit pour plus de connexions
     const speed = 1.0
 
     // Fonction pour redimensionner le canvas
